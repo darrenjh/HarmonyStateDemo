@@ -1,5 +1,9 @@
 {
   "src": [
-    "pages/Index"
+    "pages/Index",
+    "pages/layout/LayoutPage",
+    "pages/layout/LayoutPageDetail",
+    "pages/button/ButtonPage",
+    "pages/button/ButtonPageDetail"
   ]
 }
