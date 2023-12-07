@@ -3,8 +3,6 @@
     "pages/Index",
     "pages/layout/LayoutPage",
     "pages/layout/RowColumn",
-    "pages/button/ButtonPage",
-    "pages/button/ButtonPageDetail",
     "pages/BasicGrammar",
     "pages/layout/StackLayout",
     "pages/layout/FlexPage",
