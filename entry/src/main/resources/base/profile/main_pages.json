@@ -2,8 +2,18 @@
   "src": [
     "pages/Index",
     "pages/layout/LayoutPage",
-    "pages/layout/LayoutPageDetail",
+    "pages/layout/RowColumn",
     "pages/button/ButtonPage",
-    "pages/button/ButtonPageDetail"
+    "pages/button/ButtonPageDetail",
+    "pages/BasicGrammar",
+    "pages/layout/StackLayout",
+    "pages/layout/FlexPage",
+    "pages/layout/RelativeContainerPage",
+    "pages/layout/GridRowGridCol",
+    "pages/SplashPage",
+    "pages/MediaQueryPage",
+    "pages/layout/ListPage",
+    "pages/layout/GridGridItemPage",
+    "pages/layout/SwiperPage"
   ]
 }

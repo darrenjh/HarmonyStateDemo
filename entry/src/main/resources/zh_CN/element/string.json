@@ -10,7 +10,23 @@
     },
     {
       "name": "EntryAbility_label",
-      "value": "Harmony练习"
+      "value": "ArkTS Demo"
+    },
+    {
+      "name": "MainEntryAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainEntryAbility_label",
+      "value": "label"
+    },
+    {
+      "name": "SplashAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "SplashAbility_label",
+      "value": "label"
     }
   ]
 }

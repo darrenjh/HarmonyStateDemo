@@ -12,19 +12,19 @@ import hilog from '@ohos.hilog';
    * @State允许修饰的类型：Object、class、string、number、boolean、enum类型
    */
 struct Index {
-  @State actionBarTitle: string = "Harmony Practice"
-  @State layoutStr: string = "常用的布局"
-  @State buttonStr: string = "按钮样式"
-  @State btnList: string = "创建列表"
-  @State btnGridItem: string = "创建网格"
-  @State btnSwiper: string = "创建轮播"
-  @State btnMediaQuery: string = "媒体查询"
-
+  @State actionBarTitle: string = "Harmony Os(ArkTS)"
+  private btnStrArray: String[] = ["基本语法", "构建布局", "媒体查询(mediaqery)",
+    "添加组件", "设置路由和组件导航", "显示图形", "使用动画", "交互事件",
+    "Web", "通知", "窗口管理", "WebGL", "媒体（音视频、图片等）", "安全", "网络与连接", "电话服务",
+    "数据管理", "文件管理", "后台任务（Backgroud Task）管理", "设备管理", "DFX",
+    "国际化", "应用测试（自动化测试框架）", "Native"
+  ];
 
   //按钮的宽度
   @State btnWidth: number = 320
   @State btnHeight: number = 50
   @State btnFontSize: number = 18
+  scroller: Scroller = new Scroller();
 
   build() {
     Column() {
@@ -37,154 +37,66 @@ struct Index {
         .textAlign(TextAlign.Center)
         .fontWeight(FontWeight.Bold)
         .backgroundColor(Color.Gray)
-
-
-      //布局layout
-      Button(this.layoutStr, { type: ButtonType.Normal })
-        .margin({ top: 20 })
-        .borderRadius(15)
-        .backgroundColor(Color.Gray)
-        .fontColor(Color.White)
-        .fontSize(this.btnFontSize)
-        .width(this.btnWidth)
-        .height(this.btnHeight)
-        .fontWeight(FontWeight.Bold)
-        .onClick(() => {
-          hilog.info(0x0000, 'testTag', '%{public}s', '通过路由，点击跳转到' + this.layoutStr + '界面');
-          router.pushUrl({
-            url: 'pages/layout/LayoutPage',
-            params: {
-              title: this.layoutStr
-            }
-          }).then(() => {
-            hilog.info(0x0000, 'testTag', '%{public}s', '通过路由，成功跳转到' + this.layoutStr + '界面');
-          }).catch((err) => {
-            hilog.info(0x0000, 'testTag', '%{public}s', '跳转失败code:' + err.code + ',message:' + err.message);
-          })
-        })
-
-      //按钮button
-      Button(this.buttonStr, { type: ButtonType.Normal })
-        .margin({ top: 20 })
-        .borderRadius(15)
-        .backgroundColor(Color.Gray)
-        .fontColor(Color.White)
-        .fontSize(16)
-        .width(this.btnWidth)
-        .height(this.btnHeight)
-        .fontWeight(FontWeight.Bold)
-        .onClick(() => {
-          hilog.info(0x0000, 'testTag', '%{public}s', '通过路由，跳转到' + this.buttonStr + '界面');
-          router.pushUrl({
-            url: 'pages/button/ButtonPage',
-            params: {
-              title: this.buttonStr
-            }
-          }).then(() => {
-            hilog.info(0x0000, 'testTag', '%{public}s', '通过路由，成功跳转到' + this.buttonStr + '界面');
-          }).catch((err) => {
-            hilog.info(0x0000, 'testTag', '%{public}s', '跳转失败code:' + err.code + ',message:' + err.message);
-          })
-        })
-
-      //创建列表
-      Button(this.btnList, { type: ButtonType.Normal })
-        .margin({ top: 20 })
-        .borderRadius(15)
-        .backgroundColor(Color.Gray)
-        .fontColor(Color.White)
-        .fontSize(this.btnFontSize)
-        .width(this.btnWidth)
-        .height(this.btnHeight)
-        .fontWeight(FontWeight.Bold)
-        .onClick(() => {
-          hilog.info(0x0000, 'testTag', '%{public}s', '通过路由，点击跳转到' + this.btnList + '界面');
-          router.pushUrl({
-            url: 'pages/layout/LayoutPage',
-            params: {
-              title: this.btnList
-            }
-          }).then(() => {
-            hilog.info(0x0000, 'testTag', '%{public}s', '通过路由，成功跳转到' + this.btnList + '界面');
-          }).catch((err) => {
-            hilog.info(0x0000, 'testTag', '%{public}s', '跳转失败code:' + err.code + ',message:' + err.message);
-          })
-        })
-
-      //创建网格
-      Button(this.btnGridItem, { type: ButtonType.Normal })
-        .margin({ top: 20 })
-        .borderRadius(15)
-        .backgroundColor(Color.Gray)
-        .fontColor(Color.White)
-        .fontSize(this.btnFontSize)
-        .width(this.btnWidth)
-        .height(this.btnHeight)
-        .fontWeight(FontWeight.Bold)
-        .onClick(() => {
-          hilog.info(0x0000, 'testTag', '%{public}s', '通过路由，点击跳转到' + this.btnGridItem + '界面');
-          router.pushUrl({
-            url: 'pages/layout/LayoutPage',
-            params: {
-              title: this.btnGridItem
-            }
-          }).then(() => {
-            hilog.info(0x0000, 'testTag', '%{public}s', '通过路由，成功跳转到' + this.btnGridItem + '界面');
-          }).catch((err) => {
-            hilog.info(0x0000, 'testTag', '%{public}s', '跳转失败code:' + err.code + ',message:' + err.message);
-          })
-        })
-
-      //创建轮播
-      Button(this.btnSwiper, { type: ButtonType.Normal })
-        .margin({ top: 20 })
-        .borderRadius(15)
-        .backgroundColor(Color.Gray)
-        .fontColor(Color.White)
-        .fontSize(this.btnFontSize)
-        .width(this.btnWidth)
-        .height(this.btnHeight)
-        .fontWeight(FontWeight.Bold)
-        .onClick(() => {
-          hilog.info(0x0000, 'testTag', '%{public}s', '通过路由，点击跳转到' + this.btnSwiper + '界面');
-          router.pushUrl({
-            url: 'pages/layout/LayoutPage',
-            params: {
-              title: this.btnSwiper
-            }
-          }).then(() => {
-            hilog.info(0x0000, 'testTag', '%{public}s', '通过路由，成功跳转到' + this.btnSwiper + '界面');
-          }).catch((err) => {
-            hilog.info(0x0000, 'testTag', '%{public}s', '跳转失败code:' + err.code + ',message:' + err.message);
-          })
-        })
-
-      //媒体查询
-      Button(this.btnMediaQuery, { type: ButtonType.Normal })
-        .margin({ top: 20 })
-        .borderRadius(15)
-        .backgroundColor(Color.Gray)
-        .fontColor(Color.White)
-        .fontSize(this.btnFontSize)
-        .width(this.btnWidth)
-        .height(this.btnHeight)
-        .fontWeight(FontWeight.Bold)
-        .onClick(() => {
-          hilog.info(0x0000, 'testTag', '%{public}s', '通过路由，点击跳转到' + this.btnMediaQuery + '界面');
-          router.pushUrl({
-            url: 'pages/layout/LayoutPage',
-            params: {
-              title: this.btnMediaQuery
-            }
-          }).then(() => {
-            hilog.info(0x0000, 'testTag', '%{public}s', '通过路由，成功跳转到' + this.btnMediaQuery + '界面');
-          }).catch((err) => {
-            hilog.info(0x0000, 'testTag', '%{public}s', '跳转失败code:' + err.code + ',message:' + err.message);
-          })
-        })
-
-
+      //滚动列表
+      Scroll(this.scroller) {
+        //Column容器中，space属性设置排列方向上子元素的间距
+        Column({ space: 20 }) {
+          ForEach(this.btnStrArray, (item: string, index: number) => {
+            Button(item, { type: ButtonType.Normal })
+              .borderRadius(15)
+              .backgroundColor(Color.Gray)
+              .fontColor(Color.White)
+              .fontSize(this.btnFontSize)
+              .width(this.btnWidth)
+              .height(this.btnHeight)
+              .fontWeight(FontWeight.Bold)
+              .onClick(() => {
+                doClick(item, index)
+              })
+          }, (item: string) => item)
+        }
+      }
+      .width('100%')
+      .height('100%')
+      .scrollBar(BarState.Off)
+      .edgeEffect(EdgeEffect.Spring)
+      .scrollable(ScrollDirection.Vertical)
+      .padding({ top: 20, bottom: 100 })
 
     }
+
   }
+}
+
+/**
+ * 按钮的点击事件
+ * @param btnStr 按钮文案
+ * @param index 按钮下标
+ */
+function doClick(btnStr: String, index: number) {
+  hilog.info(0x0000, 'testTag', '%{public}s', '通过路由，点击跳转到' + btnStr + '界面,index:' + index);
+  var url = 'pages/layout/LayoutPage'
+  switch (index) {
+    case 0: //基础语法
+      url = 'pages/BasicGrammar'
+      break
+    case 1: //构建布局
+      url = 'pages/layout/LayoutPage'
+      break
+    case 2: //媒体查询
+      url = 'pages/MediaQueryPage'
+      break
+    default:
+      break
+  }
+  router.pushUrl({
+    url: url,
+    params: {
+      title: btnStr
+    }
+  }).then(() => {
+    hilog.info(0x0000, 'testTag', '%{public}s', '通过路由，成功跳转到' + btnStr + '界面');
+  }).catch((err) => {
+    hilog.info(0x0000, 'testTag', '%{public}s', '跳转失败code:' + err.code + ',message:' + err.message);
+  })
 }

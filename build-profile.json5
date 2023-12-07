@@ -5,13 +5,13 @@
         "name": "default",
         "type": "HarmonyOS",
         "material": {
-          "certpath": "/Users/mac/.ohos/config/auto_debug_HarmonyStateDemo_com.harmoney.state_40086000021121592.cer",
-          "storePassword": "0000001BE41E02AFC788A3CFCE13813A5477401B2F65F98468828EB0E1F7AAA507CDA0F513F9C7B2591D3B",
+          "certpath": "/Users/mac/.ohos/config/auto_debug_HarmonyStateDemo_com.harmony.state_40086000021121592.cer",
+          "storePassword": "0000001A5F1721CAEC9F21AFBE47C44D0C86A5BF98C50DF3D0E0245217EB49651A940DDE2126D66C0618",
           "keyAlias": "debugKey",
-          "keyPassword": "0000001BEEA6B2F27C9A88006FC4135F73EBE1938BAE7A504A13DC4BB88C38690A0B0A91E05005CD7C9CA3",
-          "profile": "/Users/mac/.ohos/config/auto_debug_HarmonyStateDemo_com.harmoney.state_40086000021121592.p7b",
+          "keyPassword": "0000001A901C20F8D546AF42F713F3E68F406626D9A5C4195CCEA81026D8576D11DD20748AC8267D69DD",
+          "profile": "/Users/mac/.ohos/config/auto_debug_HarmonyStateDemo_com.harmony.state_40086000021121592.p7b",
           "signAlg": "SHA256withECDSA",
-          "storeFile": "/Users/mac/.ohos/config/auto_debug_HarmonyStateDemo_com.harmoney.state_40086000021121592.p12"
+          "storeFile": "/Users/mac/.ohos/config/auto_debug_HarmonyStateDemo_com.harmony.state_40086000021121592.p12"
         }
       }
     ],
