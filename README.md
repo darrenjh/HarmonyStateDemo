@@ -44,7 +44,7 @@
 这里练习的是ArkTS的声明式开发范式，[UI开发概述](https://developer.harmonyos.com/cn/docs/documentation/doc-guides-V3/arkts-ui-development-overview-0000001438467628-V3)
 ### (一) 构建布局
 1. [线性布局(Row/Column)](https://developer.harmonyos.com/cn/docs/documentation/doc-guides-V3/arkts-layout-development-linear-0000001504125349-V3)    
-Row容器主轴为横向，Column容器主轴为纵向。
+Row容器主轴为横向，水平布局，Column容器主轴为纵向，垂直布局。
 [RowColumn.ets](entry%2Fsrc%2Fmain%2Fets%2Fpages%2Flayout%2FRowColumn.ets)
 2. [层叠布局(Stack)](https://developer.harmonyos.com/cn/docs/documentation/doc-guides-V3/arkts-layout-development-stack-layout-0000001454605342-V3)  
 [StackLayout.ets](entry%2Fsrc%2Fmain%2Fets%2Fpages%2Flayout%2FStackLayout.ets)
@@ -85,6 +85,8 @@ Row容器主轴为横向，Column容器主轴为纵向。
 ### (七) 支持交互事件
 
 ## 五、Web
+权限说明：
+https://developer.harmonyos.com/cn/docs/documentation/doc-guides-V3/accesstoken-guidelines-0000001493744016-V3
 ## 六、通知
 ## 七、窗口管理
 ## 八、WebGL

@@ -13,6 +13,8 @@ import hilog from '@ohos.hilog';
  *
  */
 export default class EntryAbilityStage extends AbilityStage {
+
+
   // AbilityStage.context
   // context: AbilityStageContext;
   //
@@ -23,6 +25,7 @@ export default class EntryAbilityStage extends AbilityStage {
   onCreate() {
     //当应用创建时调用。系统能力：SystemCapability.Ability.AbilityRuntime.Core
     hilog.info(0x0000, 'testTag', '%{public}s', 'EntryAbilityStage->--HAP加载入口处，entry模块，首次创建会走这里，AbilityStage  onCreate');
+    console.log("test_console=========onCreate====")
   }
 
   onAcceptWant(want) {

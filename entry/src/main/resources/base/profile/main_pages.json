@@ -1,17 +1,26 @@
 {
   "src": [
     "pages/Index",
-    "pages/layout/LayoutPage",
-    "pages/layout/RowColumn",
-    "pages/BasicGrammar",
-    "pages/layout/StackLayout",
-    "pages/layout/FlexPage",
-    "pages/layout/RelativeContainerPage",
-    "pages/layout/GridRowGridCol",
+    "pages/ui/LayoutPage",
+    "pages/ui/RowColumn",
+    "pages/ui/StackLayout",
+    "pages/ui/FlexPage",
+    "pages/ui/RelativeContainerPage",
+    "pages/ui/GridRowGridCol",
     "pages/SplashPage",
-    "pages/MediaQueryPage",
-    "pages/layout/ListPage",
-    "pages/layout/GridGridItemPage",
-    "pages/layout/SwiperPage"
+    "pages/ui/MediaQueryPage",
+    "pages/ui/ListPage",
+    "pages/ui/GridGridItemPage",
+    "pages/ui/SwiperPage",
+    "pages/others/OthersPageIndex",
+    "pages/others/BasicGrammar",
+    "pages/ui/AddComponentPage",
+    "pages/ui/AddPopAndMenuPage",
+    "pages/ui/AddCommonlyUsedPage",
+    "pages/ui/AddDialogPage",
+    "pages/ui/VideoPage",
+    "pages/WebPage",
+    "pages/NotificationPage",
+    "pages/NetPage"
   ]
 }

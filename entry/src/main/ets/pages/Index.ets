@@ -13,11 +13,8 @@ import hilog from '@ohos.hilog';
    */
 struct Index {
   @State actionBarTitle: string = "Harmony Os(ArkTS)"
-  private btnStrArray: String[] = ["基本语法", "构建布局", "媒体查询(mediaqery)",
-    "添加组件", "设置路由和组件导航", "显示图形", "使用动画", "交互事件",
-    "Web", "通知", "窗口管理", "WebGL", "媒体（音视频、图片等）", "安全", "网络与连接", "电话服务",
-    "数据管理", "文件管理", "后台任务（Backgroud Task）管理", "设备管理", "DFX",
-    "国际化", "应用测试（自动化测试框架）", "Native"
+  private btnStrArray: String[] = ["构建布局",
+    "添加组件", "Web", "通知", "网络与连接", "其他功能"
   ];
 
   //按钮的宽度
@@ -29,7 +26,7 @@ struct Index {
   build() {
     Column() {
       // 标题栏
-      Text(this.actionBarTitle)
+      Text($r('app.string.EntryAbility_label'))
         .fontColor(Color.White)
         .fontSize(20)
         .width('100%')
@@ -57,7 +54,6 @@ struct Index {
         }
       }
       .width('100%')
-      .height('100%')
       .scrollBar(BarState.Off)
       .edgeEffect(EdgeEffect.Spring)
       .scrollable(ScrollDirection.Vertical)
@@ -75,16 +71,25 @@ struct Index {
  */
 function doClick(btnStr: String, index: number) {
   hilog.info(0x0000, 'testTag', '%{public}s', '通过路由，点击跳转到' + btnStr + '界面,index:' + index);
-  var url = 'pages/layout/LayoutPage'
+  var url = 'pages/ui/LayoutPage'
   switch (index) {
-    case 0: //基础语法
-      url = 'pages/BasicGrammar'
+    case 0: //构建布局
+      url = 'pages/ui/LayoutPage'
       break
-    case 1: //构建布局
-      url = 'pages/layout/LayoutPage'
+    case 1: //添加组件
+      url = 'pages/ui/AddComponentPage'
       break
-    case 2: //媒体查询
-      url = 'pages/MediaQueryPage'
+    case 2: //Web
+      url = 'pages/WebPage'
+      break
+    case 3: //通知
+      url = 'pages/NotificationPage'
+      break
+    case 4://网络连接
+      url = 'pages/NetPage'
+      break;
+    case 5: //其他功能
+      url = 'pages/others/OthersPageIndex'
       break
     default:
       break

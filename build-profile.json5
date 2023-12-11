@@ -6,9 +6,9 @@
         "type": "HarmonyOS",
         "material": {
           "certpath": "/Users/mac/.ohos/config/auto_debug_HarmonyStateDemo_com.harmony.state_40086000021121592.cer",
-          "storePassword": "0000001A5F1721CAEC9F21AFBE47C44D0C86A5BF98C50DF3D0E0245217EB49651A940DDE2126D66C0618",
+          "storePassword": "0000001BCD55C7C7BF6039551ED076B4B52131A98B31A5FC58B176D65C48B735CDF51FA35E5733EA92EA21",
           "keyAlias": "debugKey",
-          "keyPassword": "0000001A901C20F8D546AF42F713F3E68F406626D9A5C4195CCEA81026D8576D11DD20748AC8267D69DD",
+          "keyPassword": "0000001B77ECD6FB339B95BB077F4B0350F5C8AC2185D81E2AA5DC8304F5D600FD992DA879FFC2951EB513",
           "profile": "/Users/mac/.ohos/config/auto_debug_HarmonyStateDemo_com.harmony.state_40086000021121592.p7b",
           "signAlg": "SHA256withECDSA",
           "storeFile": "/Users/mac/.ohos/config/auto_debug_HarmonyStateDemo_com.harmony.state_40086000021121592.p12"

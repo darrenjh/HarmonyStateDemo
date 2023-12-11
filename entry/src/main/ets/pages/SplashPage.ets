@@ -8,7 +8,7 @@ struct SplashPage {
   @State countDownFrom: number = 3
   private timerId: number = -1
 
-  aboutToAppear() {
+  aboutToAppear() { //自定义组件生命周期函数，build之前执行的阶段
     this.timerId = setInterval(() => {
       if (this.countDownFrom <= 1) {
         clearTimeout(this.timerId) // countDownFrom小于等于1时清除计时器
@@ -16,10 +16,10 @@ struct SplashPage {
       }
       hilog.info(0x0000, 'testTag', '%{public}s', '倒计时-->' + this.countDownFrom);
       this.countDownFrom -= 1
-    }, 1000) // countDownFrom每1s减1
+    }, 1000)
   }
 
-  aboutToDisappear(): void {
+  aboutToDisappear(): void { //自定义组件生命周期函数，组件实例被销毁
     if (this.timerId > 0) {
       clearTimeout(this.timerId)
       this.timerId = -1
@@ -29,7 +29,7 @@ struct SplashPage {
   build() {
     Stack({ alignContent: Alignment.TopEnd }) {
       Image("https://img0.baidu.com/it/u=3838490271,1177851877&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=889")
-        .alt($r('app.media.splash_default'))// 使用alt，在网络图片加载成功前使用占位图
+        .alt($r('app.media.splash_default'))
 
       Column() {
         Text('Harmony OS ').fontSize(40).fontWeight(FontWeight.Bold).fontColor(Color.White).margin({
@@ -52,13 +52,13 @@ struct SplashPage {
 
         }.height('100%').alignItems(VerticalAlign.Bottom)
       }.width('100%').alignItems(HorizontalAlign.Center).margin({
-        bottom:30
+        bottom: 30
       })
 
       Text(`跳过(${this.countDownFrom})`)
-        .fontSize(15)
+        .fontSize(12)
         .fontColor(Color.White)
-        .width(80)
+        .width(60)
         .height(30)
         .textAlign(TextAlign.Center)
         .margin({
@@ -66,12 +66,25 @@ struct SplashPage {
           right: 30
         })
         .onClick(() => {
-          clearTimeout(this.timerId) // countDownFrom小于等于1时清除计时器
+          clearTimeout(this.timerId)
           toNext();
         })
-        .borderRadius(10)
+        .borderRadius(15)
         .backgroundColor(Color.Orange)
     }.width('100%').height('100%')
+  }
+
+  onPageShow() {
+    hilog.info(0x0000, 'testTag', '%{public}s', '组件在前台');
+  }
+
+  onPageHide() {
+    hilog.info(0x0000, 'testTag', '%{public}s', '组件在后台');
+
+  }
+
+  onBackPress() {
+    hilog.info(0x0000, 'testTag', '%{public}s', '组件返回');
   }
 }
 
@@ -83,4 +96,6 @@ function toNext() {
   }).catch((err) => {
     hilog.info(0x0000, 'testTag', '%{public}s', '跳转失败code:' + err.code + ',message:' + err.message);
   })
+
+
 }

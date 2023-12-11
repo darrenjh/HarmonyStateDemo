@@ -33,6 +33,27 @@
           }
         ]
       }
+    ],
+    "requestPermissions": [
+      //    https://developer.harmonyos.com/cn/docs/documentation/doc-guides-V3/accesstoken-guidelines-0000001493744016-V3
+      {
+        "name": "ohos.permission.INTERNET",
+        "usedScene": {
+          "when": "always"
+        }
+      },
+      {
+        "name": "ohos.permission.GET_NETWORK_INFO",
+        "usedScene": {
+          "when": "always"
+        }
+      },
+      {
+        "name": "ohos.permission.SET_NETWORK_INFO",
+        "usedScene": {
+          "when": "always"
+        }
+      },
     ]
   }
 }
